@@ -14,3 +14,14 @@ chat_bot_name = input("enter the name of your bot: \n")
 chat_bot_year = int(input("Enter the year you created the bot: \n"))
 greet(chat_bot_name, chat_bot_year)
 remind_name()
+
+#Age Guessing game
+print('Let me guess your age.')
+print('Enter remainders of dividing your age by 3, 5 and 7.')
+
+# reading all remainders
+remainder3 = int(input())
+remainder5 = int(input())
+remainder7 = int(input())
+your_age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
+print(f"Your age is {your_age}; that's a good time to start programming!")
