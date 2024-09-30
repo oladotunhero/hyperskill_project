@@ -30,3 +30,9 @@ for line in lines:
 total_earning = sum(income)
 
 print(f"Income: {total_earning}")
+
+#calculate the net income based on business expenses
+staff_expenses = int(input("Staff expenses: \n"))
+other_expenses = int(input("Other expenses: \n"))
+net_income = total_earning - staff_expenses - other_expenses
+print(f"Net income: ${net_income}")
