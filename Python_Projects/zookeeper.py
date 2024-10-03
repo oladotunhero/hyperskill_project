@@ -122,9 +122,18 @@ It looks like we will soon have more rabbits!"""
 
 animals = [camel, lion, deer, goose, bat, rabbit]
 
-number = int(input("Please enter the number of the habitat you would like to view: "))
+def goat():
+    while True:
+        user_input = input("Please enter the number of the habitat you would like to view (or 'exit' to stop): ")
 
-if 1 <= number <= len(animals):
-    print(animals[number - 1])
-print("""---
-      Thank you for visiting the zoo""")
+        if user_input == 'exit':
+            print("See you later!")
+            break
+
+        try:
+            number = int(user_input)
+            if number <= len(animals):
+                print(animals[number])
+        except ValueError:
+            print("Enter a valid number or type 'exit'.")
+goat()
