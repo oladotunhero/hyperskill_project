@@ -9,3 +9,17 @@ while True:
     else:
         print(f"Current data length is {len(SAVED_INPUT)}, {numbers_left} symbols left")
 print(f"Final data string:\n{SAVED_INPUT}")
+
+triads = ['000', '001', '010', '011', '100', '101', '110', '111']
+counts = {triad: [0, 0] for triad in triads}
+
+for i in range(len(SAVED_INPUT) - 3):
+    triad = SAVED_INPUT[i:i+3]  
+    next_char = SAVED_INPUT[i+3]  
+    if triad in counts:
+        digit = int(next_char)  
+        counts[triad][digit] += 1  
+
+# Print the results
+for triad in triads:
+    print(f"{triad}: {counts[triad][0]},{counts[triad][1]}")
