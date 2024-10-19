@@ -52,3 +52,14 @@ for i in range(len(NEW_INPUT) - 3):
         prediction = str(random.randint(0,1))
     predictions += prediction
 print(f"predictions:\n{predictions}")
+
+#calculate the accuracy
+actual = NEW_INPUT[3:]
+correct = 0
+for a, b in zip(actual, predictions):
+    if a == b:
+        correct += 1
+total = len(actual)
+accuracy = round((correct / total) * 100, 2)
+
+print(f"Computer guessed right {correct} out of {total} symbols ({accuracy}%)")
