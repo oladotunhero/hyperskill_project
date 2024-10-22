@@ -60,8 +60,6 @@ while True:
                 prediction = "0"
             elif count_1 > count_0:
                 prediction = "1"
-            else:
-                prediction = str(random.randint(0, 1))
         else:
             prediction = str(random.randint(0, 1))
         predictions += prediction
